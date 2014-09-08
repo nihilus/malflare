@@ -71,7 +71,7 @@ MFT_H * mft_open(const char *dst, int create){
 	if ( stat( dst, &St ) != 0){
 		if (create){
 			#ifdef WIN32
-				rc = _mkdir(dst);
+				rc = mkdir(dst);
 			#else
 				rc = mkdir(dst, 0755);
 			#endif
