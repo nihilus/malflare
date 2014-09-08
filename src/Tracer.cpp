@@ -18,7 +18,6 @@
 #include <sys/stat.h>
 #ifdef _WIN32
 #include <io.h>
-#define MAXPATHLEN _MAX_PATH
 #else
 #include <unistd.h>
 #include <sys/param.h>
@@ -101,8 +100,8 @@ MFT_H * mft_open(const char *dst, int create){
 
 
 	// Change dir
-	char current_path[MAXPATHLEN];
-	getcwd(current_path, MAXPATHLEN);
+	char current_path[QMAXPATH];
+	getcwd(current_path, QMAXPATH);
 
 	chdir(dst);
 

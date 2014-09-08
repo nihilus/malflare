@@ -153,9 +153,8 @@ Malflare::Malflare() {
  * */
 int Malflare::ida_init(void) {
 	// "metapc" represents x86 architecture
-	if ((callui(ui_get_hwnd).vptr == NULL) || (strncmp(inf.procName, "metapc",
-			6) != 0) || (inf.filetype != f_PE)) {
-		error("Only PE binary type compiled for the x86 platform is supported.");
+	if ((callui(ui_get_hwnd).vptr == NULL) || (strncmp(inf.procName, "metapc", 6) != 0) || (inf.filetype != f_PE)) {
+		//warn("Only PE binary type compiled for the x86 platform is supported.");
 		return PLUGIN_SKIP;
 	}
 	return PLUGIN_OK;
@@ -519,9 +518,7 @@ LRESULT CALLBACK Malflare::control_callback(HWND hWnd, UINT message,
 						"%/" //Form Callback function
 						"\n";
 			do {
-				if (AskUsingForm_c(szForm, szTraceFilePath,
-						button_changed_callback, select_tracefile_form_callback)
-						== 1) { //Button ok
+				if (AskUsingForm_c(szForm, szTraceFilePath, button_changed_callback, select_tracefile_form_callback) == 1) { //Button ok
 					if (qstrcmp(szTraceFilePath, "") == 0)
 						warning("No trace file selected");
 				} else
@@ -1503,8 +1500,7 @@ void CALLBACK Malflare::create_gui_controls_callback(HWND parent,
  * Handles the brows button callback in the select tracefile pop up.
  * */
 void Malflare::button_changed_callback(TView *tvFields[], int iCode) {
-	char *scriptszTraceFilePath;
-	scriptszTraceFilePath = askfile_c(0, "*info*", "Select trace file");
+	char *scriptszTraceFilePath = askfile_c(0, "*info*", "Select trace file");
 
 	if (scriptszTraceFilePath) {
 		qstrncpy(szTraceFilePath, scriptszTraceFilePath,
