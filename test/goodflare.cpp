@@ -5,8 +5,8 @@
  *      Author: Dominic Fischer, Daniel Jordi
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 char key = 0x88;
 char another_key = 0x99;
@@ -69,15 +69,15 @@ int main() {
 	/**
 	 * Decrypting things
 	 */
-	char *data = malloc(sizeof(DATA));
+	char *data = (char *)malloc(sizeof(DATA));
 	printf("Decrypting first chunk with %i bytes... \n", sizeof(DATA));
 	decrypt(data, sizeof(DATA), DATA);
 
-	char *data2 = malloc(sizeof(DATA));
+	char *data2 = (char *)malloc(sizeof(DATA));
 	printf("Decrypting second chunk with %i bytes... \n", sizeof(DATA2));
 	decrypt(data2, sizeof(DATA2), DATA2);
 
-	char* file_path = malloc(sizeof(FILE_PATH));
+	char* file_path = (char *)malloc(sizeof(FILE_PATH));
 	printf("Decrypting file path with %i bytes... \n", sizeof(FILE_PATH));
 	decrypt(file_path, sizeof(FILE_PATH), FILE_PATH);
 
