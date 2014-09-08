@@ -1511,6 +1511,7 @@ void Malflare::button_changed_callback(TView *tvFields[], int iCode) {
 				sizeof(szTraceFilePath));
 		char* ptr = strstr(szTraceFilePath, "/info");
 		if (ptr != NULL) {
+#undef strncpy
 			strncpy(ptr, "\0", 1);
 		}
 	}

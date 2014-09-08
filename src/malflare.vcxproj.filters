@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{03690a4f-c2a3-4486-a6b4-f4ef0dbce825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code">
+      <UniqueIdentifier>{b5413132-4403-45eb-bb42-b4a92914bbbb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalIncludes.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="libmalflare.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopDetection.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Malflare.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SegmentManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SyscallInterpretation.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="typedefs.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BinaryTree.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="LoopDetection.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Malflare.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginInfo.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Segment.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SegmentManager.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="SyscallInterpretation.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracer.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

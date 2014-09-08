@@ -8,6 +8,7 @@
 //-----------------------------------------------------------------------------
 // Includes
 //-----------------------------------------------------------------------------
+#include <windows.h>
 #include "Tracer.h"
 
 #include <stdio.h>
@@ -15,8 +16,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <sys/stat.h>
+#ifdef _WIN32
+#include <io.h>
+#define MAXPATHLEN _MAX_PATH
+#else
 #include <unistd.h>
 #include <sys/param.h>
+#endif
 
 #include "main.h"
 
@@ -64,8 +70,8 @@ MFT_H * mft_open(const char *dst, int create){
 
 	if ( stat( dst, &St ) != 0){
 		if (create){
-			#ifdef __MSDOS__
-				rc = mkdir(dst);
+			#ifdef WIN32
+				rc = _mkdir(dst);
 			#else
 				rc = mkdir(dst, 0755);
 			#endif

@@ -12,7 +12,7 @@
 // Includes
 //-----------------------------------------------------------------------------
 //#define USE_STANDARD_FILE_FUNCTIONS
-#define USE_DANGEROUS_FUNCTIONS
+#define USE_DANGEROUS_FUNCTIONSF
 #define add_popup add_custom_viewer_popup_item
 #include <windows.h>
 #include <windowsx.h>
@@ -44,7 +44,7 @@
 #define GUI_PLUGIN_COMMENT 	  "This is the Malflare plugin."
 #define GUI_PLUGIN_HELP  	  "Malflare Plugin 1.00"
 #define PLUGIN_HOTKEY    	  "Alt-M"
-#define PLUGIN_OPTIONS     	  FORM_MDI | FORM_TAB | FORM_MENU | FORM_RESTORE
+#define PLUGIN_OPTIONS     	  FORM_TAB | FORM_MENU | FORM_RESTORE
 
 /*
  * Main class of the IDA Pro Plugin Malflare.

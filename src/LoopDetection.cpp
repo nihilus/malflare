@@ -4,7 +4,7 @@
  * Date:			27.04.2011
  * Dependencies:
  */
-
+#include <windows.h>
 #include "LoopDetection.h"
 
 using namespace std;
